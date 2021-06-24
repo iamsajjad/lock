@@ -1,0 +1,57 @@
+{% load i18n %}
+{% load static %}
+{% load humanize %}
+<li class="clusterItem">
+  <p class="clusterName">{{ cluster.customer.name }}</p>
+  <div class="id">
+    <p>ID : {{ cluster.primary }}</p>
+  </div>
+  <p class="clusterInfo">{% trans 'Date' %} : {{ cluster.date|date:"d/m/Y - D - P" }}</p>
+  <p class="clusterInfo">{% trans 'Modified' %} : {{ cluster.modified|date:"d/m/Y - D - P" }}</p>
+  <p class="clusterInfo">{% trans 'Phone' %} : {{ cluster.customer.telephone }}</p>
+  <p class="clusterInfo">{% trans 'Address' %} : {{ cluster.customer.address }}</p>
+  <p class="clusterInfo">{% trans 'Driver' %} : {{ cluster.driver }}</p>
+  <p class="clusterInfo">{% trans 'By' %} : {{ cluster.creator }}</p>
+  {% if cluster.branch is True %}
+  <p class="clusterInfo darkText">{% trans 'Price' %} : <span class="outgoingBranch">{{ cluster.total|intcomma:False }}</span> {% trans cluster.currency %}</p>
+  <p class="clusterInfo darkText">{% trans 'Discount' %} : <span class="outgoingBranch">{{ cluster.discount|intcomma:False }}</span> {% trans  cluster.currency %}</p>
+  <p class="clusterInfo darkText">{% trans 'Receive' %} : <span class="outgoingBranch">{{ cluster.receive|intcomma:False }}</span> {% trans cluster.currency %}</p>
+  <p class="clusterInfo darkText">{% trans 'Rest' %} : <span class="outgoingBranch">{{ cluster.rest|intcomma:False }}</span> {% trans cluster.currency %}</p>
+  {% else %}
+  <p class="clusterInfo darkText">{% trans 'Price' %} : <span class="incomingBranch">{{ cluster.total|intcomma:False }}</span> {% trans cluster.currency %}</p>
+  <p class="clusterInfo darkText">{% trans 'Discount' %} : <span class="incomingBranch">{{ cluster.discount|intcomma:False }}</span> {% trans cluster.currency %}</p>
+  <p class="clusterInfo darkText">{% trans 'Receive' %} : <span class="incomingBranch">{{ cluster.receive|intcomma:False }}</span> {% trans cluster.currency %}</p>
+  <p class="clusterInfo darkText">{% trans 'Rest' %} : <span class="incomingBranch">{{ cluster.rest|intcomma:False }}</span> {% trans cluster.currency %}</p>
+  {% endif %}
+  <p class="clusterInfo description">{% trans 'Description' %} : {% trans cluster.description %}</p>
+  <div>
+    <div class="clusterOperations">
+      <div class="clusterOperationsLabels">
+        <ul class="operationsContainer">
+          <li class="operations">
+            <a class="links delete" onclick="lockCluster('{% url 'lockCluster' clusterPrimary=cluster.primary %}')" method="get">
+              {% trans 'Lock' %} <img  class="svgs" src="{% static 'public/svgs/lock.svg' %}" alt="">
+            </a>
+          </li>
+          <li class="operations">
+            <a class="links" href="{% url 'updateCluster' clusterPrimary=cluster.primary %}">
+              {% trans 'Update' %} <img  class="svgs" src="{% static 'public/svgs/doc-changes.svg' %}" alt="">
+            </a>
+          </li>
+          <li class="operations">
+            <a class="links" href="{% url 'showCluster' clusterPrimary=cluster.primary %}">
+              {% trans 'Show' %} <img  class="svgs" src="{% static 'public/svgs/review-list.svg' %}" alt="">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="branch">
+      {% if cluster.branch is True %}
+      <div class="mark outgoingBranch"></div>
+      {% else %}
+      <div class="mark incomingBranch"></div>
+      {% endif %}
+    </div>
+  </div>
+</li>

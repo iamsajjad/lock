@@ -1,0 +1,209 @@
+/*
+  Cluster
+  by Sajjad alDalwachee
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 8px;
+  color: white;
+}
+
+.container {
+  width: 1230px;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.pureClusters {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 25px 0;
+}
+
+.cluster {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.clusterItem {
+  width: 280px;
+  height: 310px;
+  margin: 10px;
+  padding: 16px 8px;
+  display: inline-block;
+  position: relative;
+  border-radius: 16px;
+  background: #000000;
+  box-shadow: 0 0 3px 0px rgb(0, 0, 0, 0.5);
+  vertical-align: top;
+  overflow: hidden;
+}
+
+.clusterName {
+  max-width: 88%;
+  margin: 0;
+  padding: 5px;
+  display: block;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  font-family: OpenSans-Regular, Changa-Regular;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.clusterInfo {
+  color: white;
+  padding: 0 10px 0 0;
+  display: inline-block;
+  line-height: 0px;
+  font-size: 12.8px;
+  font-family: OpenSans-Regular, Changa-Regular;
+  text-transform: capitalize;
+}
+
+.description {
+  max-height: 60px;
+  color: #CC5050;
+  font-style: italic;
+  display: inline;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+
+.branch .mark {
+  top: 20px;
+  right: 20px;
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  position: absolute;
+  vertical-align: middle;
+  overflow: hidden;
+  border-radius: 100%;
+  background: black;
+  color: transparent;
+  line-height: 16px;
+}
+
+.clusterItem .darkText {
+  color: #aaaaaa;
+  font-family: OpenSans-semibold, Changa-Regular;
+}
+
+.clusterItem .outgoingBranch {
+  color: #BB9B49;
+}
+
+.clusterItem .incomingBranch {
+  color: #E60017;
+}
+
+.branch .mark.outgoingBranch {
+  background: #BB9B49;
+}
+
+.branch .mark.incomingBranch {
+  background: #E60017;
+}
+
+.clusterOperations {
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  background: transparent;
+  padding: 20px 0px;
+  border-top: 1px dashed #808080;
+  border-radius: 0 0 16px 16px;
+  font-size: 13px;
+}
+
+.clusterOperationsLabels {
+  top: 0;
+  position: absolute;
+  line-height: 40px;
+}
+
+.operationsContainer {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  font-family: 'Lato', sans-serif;
+  list-style: none;
+}
+
+.operations {
+  margin: 0px 16px;
+}
+.svgs {
+  vertical-align: middle;
+  filter: invert(0.5);
+}
+
+.links {
+  color: white;
+  font-size: 12.8px;
+  font-family: OxygenMono, Changa-Regular;
+  text-decoration: none;
+  outline: none;
+}
+
+.links:hover {
+  color: #BB9B49;
+}
+
+.delete:hover {
+  color: #E60017;
+}
+
+.id {
+  height: 16px;
+  width: auto;
+  margin: 0 10px 0 0;
+  display: inline-block;
+  position: relative;
+  border-radius: 4px;
+  background: #eeeeee;
+}
+
+.id p {
+  color: black;
+  padding: 0 5px;
+  font-size: 14px;
+  font-family: FiraMono;
+}
+
+.id,
+.id * {
+  cursor: default;
+}
+

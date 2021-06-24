@@ -1,0 +1,178 @@
+/*
+  Table
+  by Sajjad alDalwachee
+*/
+* {
+  transition: 0.3s;
+}
+
+.deleteButton {
+  width: 75px;
+  height: 25px;
+  margin: 2px;
+  border: 0;
+  color: #202020;
+  font-family: OpenSans-Regular, Changa-Regular;
+  font-size: 14px;
+  background: white;
+  text-transform: capitalize;
+  border-radius: 4px;
+  box-shadow: 0 0 5px 0 rgba(200, 200, 200, 200);
+  overflow: hidden;
+  position: relative;
+  outline-style: none;
+  font-weight: 200;
+  transition: 0.3s;
+  outline-style: none;
+  outline: 0;
+  cursor: pointer;
+}
+
+.deleteButton .svgs {
+  vertical-align: middle;
+  filter: invert(0.5)
+}
+
+.deleteButton:hover {
+  color: white;
+  background: #d11a2a;
+  box-shadow: 0 0 5px 0 rgba(10, 0, 0, 200);
+}
+
+.deleteButton:hover .svgs {
+  filter: invert(0)
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tableHead {
+  height: 50px;
+}
+
+.columna {
+  width: 10%;
+  text-align: center;
+}
+
+.columnb {
+  width: 25%;
+  text-align: center;
+}
+
+.columnc {
+  width: 13%;
+  text-align: center;
+}
+
+.columnd {
+  width: 13%;
+  text-align: center;
+}
+
+.columne {
+  width: 13%;
+  text-align: center;
+}
+
+.columnf {
+  width: 13%;
+  text-align: center;
+}
+
+.columng {
+  width: 13%;
+  text-align: center;
+}
+
+.tableHead {
+  height: 50px;
+}
+
+.tableHead th {
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.tableBody td {
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  word-break: break-all;
+}
+
+/* Fix header */
+.table {
+  position: relative;
+  padding-top: 50px;
+}
+
+.tableHead {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.tableBody {
+  height: calc(100vh - 224.5px);
+  overflow: scroll;
+}
+
+/* Style */
+.table {
+  background: #181818;
+}
+
+.table th, .table th a {
+  color: white;
+  line-height: 1.4;
+  font-family: OpenSans-Bold, Changa-Regular;
+  font-size: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: default;
+}
+
+.table td {
+  color: white;
+  line-height: 1.4;
+  font-size: 14px;
+  font-family: OpenSans-Regular, Changa-Regular;
+  background: transparent;
+  cursor: default;
+}
+
+.currentCurrency {
+  color: #4eb361;
+  font-family: OpenSans-bold, Changa-Regular;
+}
+
+.table th a {
+  cursor: pointer;
+}
+
+.trOdd {
+  background: #0B0B0B;
+}
+
+.trEven {
+  background: #202020;
+}
+
+.trOdd, .trEven {
+  transition: 0.3s;
+}
+
+.trOdd:hover, .trEven:hover {
+  position: relative;
+  background: #808080;
+  cursor: default;
+}
+
+.table tr th a:hover {
+  color: #d11a2a;
+}

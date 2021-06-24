@@ -1,0 +1,202 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+.btn {
+  box-sizing: border-box;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: transparent;
+  border: 2px solid #e74c3c;
+  border-radius: 0.6em;
+  color: #e74c3c;
+  cursor: pointer;
+  display: flex;
+  align-self: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 4px;
+  padding: 5px 10px;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+.btn:hover, .btn:focus {
+  color: #fff;
+  outline: 0;
+}
+
+.btn {
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+.btn:hover {
+  box-shadow: 0 0 40px 40px #e74c3c inset;
+}
+.StudentCA{
+  color: #353535;
+  font-size: 14px;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.container {
+  width: 400px;
+  margin: 100px auto;
+  position: relative;
+}
+
+#addressesForm input[type="text"],
+#addressesForm input[type="email"],
+#addressesForm input[type="number"],
+#addressesForm input[type="url"],
+#addressesForm textarea,
+#addressesForm button[type="submit"] {
+  font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
+  border-radius: 4px;
+}
+
+#addressesForm {
+  background: #F9F9F9;
+  padding: 25px;
+  margin: 10px 0;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  border-radius: 8px;
+}
+
+#addressesForm h3 {
+  color: #4CAF50;
+  display: block;
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+#addressesForm h4 {
+  margin: 5px 0 15px;
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+fieldset {
+  border: medium none !important;
+  margin: 0 0 10px;
+  min-width: 100%;
+  padding: 0;
+  width: 100%;
+}
+p{
+    display: inline;
+}
+.emo{
+    display: inline;
+    font-family:Verdana;
+
+}
+#addressesForm input[type="text"],
+#addressesForm input[type="email"],
+#addressesForm input[type="number"],
+#addressesForm input[type="url"],
+#addressesForm textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #eeeeee;
+  margin: 0 0 5px;
+  padding: 10px;
+}
+
+#addressesForm input[type="text"]:hover,
+#addressesForm input[type="email"]:hover,
+#addressesForm input[type="number"]:hover,
+#addressesForm input[type="url"]:hover,
+#addressesForm textarea:hover {
+  -webkit-transition: border-color 0.3s ease-in-out;
+  -moz-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
+  border: 1px solid #aaa;
+}
+
+#addressesForm textarea {
+  height: 100px;
+  max-width: 100%;
+  resize: none;
+}
+
+#addressesForm button[type="submit"] {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background: #4CAF50;
+  color: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+#addressesForm button[type="submit"]:hover {
+  background: #43A047;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#addressesForm button[type="submit"]:active {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.copyright {
+  text-align: center;
+}
+
+#addressesForm input:focus,
+#addressesForm textarea:focus {
+  outline: 0;
+  border: 1px solid #aaa;
+}
+
+.ignored {
+  color: #fc5050;
+  padding: 0 0 0 10px;
+  text-decoration: line-through;
+}
+
+.activeAddress {
+  color: #43A047;
+  padding: 0 0 0 10px;
+}
+
+.deactiveAddress {
+  color: #fc5050;
+  padding: 0 0 0 10px;
+}
+
+::-webkit-input-placeholder {
+  color: #888;
+}
+
+:-moz-placeholder {
+  color: #888;
+}
+
+::-moz-placeholder {
+  color: #888;
+}
+
+:-ms-input-placeholder {
+  color: #888;
+}

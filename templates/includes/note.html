@@ -1,0 +1,25 @@
+{% load i18n %}
+{% load static %}
+<div class="notesContainer">
+  <p class="noteTitle">{% trans 'Notes' %}</p>
+  <div class="noteContainer">
+    <form class="noteForm" action="{% url 'createNote' %}" method="post">{% csrf_token %}
+      <input type="text" name="note" value="" class="noteInput" placeholder="{% trans 'Write Your Note Here' %}">
+    </form>
+  </div>
+  {% for note in notes %}
+  <div class="note">
+    <div class="id">
+      <p>Note Id : {{ note.primary }}</p>
+    </div>
+    <p class="noteInfo">{% trans 'Author' %} : {{ note.name }}</p>
+    <p class="noteInfo">{% trans 'Date' %} : {{ note.date }}</p>
+    <p class="noteText">{{ note.note }}</p>
+    <button class="deleteNote" type="button" name="button">
+      <a href="{% url 'deleteNote' notePrimary=note.primary %}">
+        {% trans 'Remove' %} <img  class="svgs" src="{% static 'public/svgs/remove.svg' %}" alt="">
+      </a>
+    </button>
+  </div>
+  {% endfor %}
+</div>

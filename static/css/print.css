@@ -1,0 +1,207 @@
+/*
+  Maintainer
+  by Sajjad alDalwachee
+*/
+@media print {
+  .noprint {
+    display: none;
+  }
+
+  body, h1, h2, h3, ol, ul, div, span, p {
+    display: block !important;
+    width: auto !important;
+    float: none !important;
+    position: static !important;
+    overflow: visible !important;
+  }
+
+  body {
+    margin: 0mm auto !important;
+  }
+
+  @page {
+    size: 8.3in 11.7in !important;
+    margin: 0mm;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+  }
+}
+
+/* On Screen*/
+body {
+  padding: 0;
+  margin: 0mm;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #000000;
+  text-align: center;
+  font-family: OpenSans-Regular, Changa-Regular;
+}
+
+p {
+  color: #000000;
+  text-align: center;
+  font-family: OpenSans-Regular, Changa-Regular;
+}
+
+.header {
+  font-family: ElMessiri, Changa-Regular;
+}
+
+.container-wapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {}
+
+table {
+  width: 760px;
+  max-width: 760px;
+  min-width: 760px;
+}
+
+.branch {
+  text-align: center;
+}
+
+table, th, td {
+  height: 24px;
+  max-height: 24px !important;
+  margin: auto;
+  border-collapse: collapse;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+th, td {
+  word-wrap: break-word;
+  padding: 0 3px;
+  font-size: 12px;
+  font-family: OpenSans-Regular, Changa-Regular;
+}
+
+th {
+  font-weight: bold;
+  background: #cccccc;
+}
+
+.infoTable{
+  margin-top: 60px;
+}
+table tr .no {
+  width: 60px;
+  max-width: 60px;
+  border: 1px solid #000000;
+}
+
+table tr .item {
+  width: 280px;
+  max-width: 280px;
+  border: 1px solid #000000;
+}
+
+table tr .quantity {
+  width: 100px;
+  max-width: 100px;
+  border: 1px solid #000000;
+}
+
+table tr .price {
+  width: 100px;
+  max-width: 100px;
+  border: 1px solid #000000;
+}
+
+table tr .discount {
+  width: 100px;
+  max-width: 100px;
+  border: 1px solid #000000;
+}
+
+table tr .total {
+  width: 120px;
+  max-width: 120px;
+  border: 1px solid #000000;
+}
+
+.pagesSpace {
+  height: 20px;
+  background-color: #ffffff;
+}
+
+.pagesSpace .tdblank {
+  border: 0;
+}
+
+.QRcode {
+  display: block;
+  position: absolute;
+}
+
+.infoTable {
+  border: 0;
+}
+
+.infoTable tr td {
+  border: 0;
+  min-width: 225px;
+  max-width: 225px;
+}
+
+p {
+  display: block;
+}
+
+.priceContainer {
+  margin: 10px auto;
+  text-align: center;
+  background: #ffffff;
+  border-collapse: collapse;
+}
+
+.priceContainer td {
+  border: 1px solid #000000;
+}
+
+.priceInfo {
+  padding: 0px 5px;
+  font-size: 14px;
+  font-family: OpenSans-Regular, Changa-Regular;
+  background: #dfdfdf;
+}
+
+.mainTotal {
+  margin: 10px auto;
+  border: 1px solid #000000;
+  background: #dfdfdf;
+}
+
+.id {
+  height: 15px;
+  max-width: 160px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: #000000;
+  padding: 0 5px;
+  font-size: 12.8px;
+  font-family: FiraMono;
+  border: 0;
+  border-radius: 4px;
+  background: #eeeeee;
+}

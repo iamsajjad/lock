@@ -1,0 +1,32 @@
+{% load i18n %}
+{% for log in logs %}
+{% if log.operation == 'add item' %}
+<p class="logMessage">{{ log.date }} : <span class="block">{{ log.creator }}</span> {% trans 'add item' %} {% trans 'to'%} <span class="block">{{ log.message }}</span></p>
+{% elif log.operation == 'delete item' %}
+<p class="logMessage">{{ log.date }} : <span class="block">{{ log.creator }}</span> {% trans 'delete item' %} {% trans 'from'%} <span class="block">{{ log.message }}</span></p>
+{% elif log.operation == 'create cluster' %}
+<p class="logMessage">{{ log.date }} : <span class="block">{{ log.creator }}</span> {% trans 'create cluster' %} <span class="block">{{ log.message }}</span></p>
+{% elif log.operation == 'update cluster' %}
+<p class="logMessage">{{ log.date }} : <span class="block">{{ log.creator }}</span> {% trans 'update cluster' %} <span class="block">{{ log.message }}</span></p>
+{% elif log.operation == 'lock cluster' %}
+<p class="logMessage">{{ log.date }} : <span class="block">{{ log.creator }}</span> {% trans 'lock cluster' %} <span class="block">{{ log.message }}</span></p>
+{% elif log.operation == 'create note' %}
+<p class="logMessage">{{ log.date }} : <span class="block">{{ log.creator }}</span> {% trans 'create note' %} <span class="block">{{ log.message }}</span></p>
+{% elif log.operation == 'delete note' %}
+<p class="logMessage">{{ log.date }} : <span class="block">{{ log.creator }}</span> {% trans 'delete note' %} <span class="block">{{ log.message }}</span></p>
+{% elif log.operation == 'create maintainer' %}
+<p class="logMessage">{{ log.date }} : <span class="block">{{ log.creator }}</span> {% trans 'create maintainer' %} <span class="block">{{ log.message }}</span></p>
+{% elif log.operation == 'update maintainer' %}
+<p class="logMessage">{{ log.date }} : <span class="block">{{ log.creator }}</span> {% trans 'update maintainer' %} <span class="block">{{ log.message }}</span></p>
+{% elif log.operation == 'delete maintainer' %}
+<p class="logMessage">{{ log.date }} : <span class="block">{{ log.creator }}</span> {% trans 'delete maintainer' %} <span class="block">{{ log.message }}</span></p>
+{% elif log.operation == 'print cluster' %}
+<p class="logMessage">{{ log.date }} : <span class="block">{{ log.creator }}</span> {% trans 'print cluster' %} <span class="block">{{ log.message }}</span></p>
+{% elif log.operation == 'update printer settings' %}
+<p class="logMessage">{{ log.date }} : <span class="block">{{ log.creator }}</span> {% trans 'update printer settings' %} <span class="block">{{ log.message }}</span></p>
+{% elif log.operation == 'switch printer language' %}
+<p class="logMessage">{{ log.date }} : <span class="block">{{ log.creator }}</span> {% trans 'switch printer language' %} {% trans 'to'%} <span class="block">{{ log.message }}</span></p>
+{% elif log.operation == 'pay' %}
+<p class="logMessage">{{ log.date }} : <span class="block">{{ log.creator }}</span> {% trans 'pay' %} {% trans 'for'%} <span class="block">{{ log.message }}</span> {% trans 'day' %}</p>
+{% endif %}
+{% endfor %}

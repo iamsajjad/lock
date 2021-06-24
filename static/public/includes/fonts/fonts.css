@@ -1,0 +1,121 @@
+/* Arabic Fonts */
+@font-face {
+  font-family: Changa-Regular;
+  src: url('Changa/Changa-Regular.ttf');
+}
+
+@font-face {
+  font-family: Scheherazade-Regular;
+  src: url('Scheherazade/Scheherazade-Regular.ttf');
+}
+
+@font-face {
+  font-family: Scheherazade-Bold;
+  src: url('Scheherazade/Scheherazade-Bold.ttf');
+}
+
+@font-face {
+  font-family: Amiri-Regular;
+  src: url('Amiri/Amiri-Regular.ttf');
+}
+
+@font-face {
+  font-family: Amiri-Bold;
+  src: url('Amiri/Amiri-Bold.ttf');
+}
+
+@font-face {
+  font-family: Cairo-Regular;
+  src: url('Cairo/Cairo-Regular.ttf');
+}
+
+@font-face {
+  font-family: Cairo-Bold;
+  src: url('Cairo/Cairo-Bold.ttf');
+}
+
+/* English Fonts */
+@font-face {
+  font-family: Roboto-Regular;
+  src: url('Roboto/Roboto-Regular.ttf');
+}
+
+@font-face {
+  font-family: Lato-Regular;
+  src: url('Lato/Lato-Regular.ttf');
+}
+
+@font-face {
+  font-family: Lato-Bold;
+  src: url('Lato/Lato-Bold.ttf');
+}
+
+@font-face {
+  font-family: Barlow-Regular;
+  src: url('Barlow/Barlow-Regular.ttf');
+}
+
+@font-face {
+  font-family: AnonymousPro;
+  src: url('AnonymousPro/AnonymousPro-Regular.ttf');
+}
+
+@font-face {
+  font-family: B612Mono;
+  src: url('B612Mono/B612Mono-Regular.ttf');
+}
+
+@font-face {
+  font-family: FiraMono;
+  src: url('FiraMono/FiraMono-Regular.ttf');
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url('Montserrat/Montserrat-Regular.ttf');
+}
+
+@font-face {
+  font-family: OpenSans-Light;
+  src: url('OpenSans/OpenSans-Light.ttf');
+}
+
+@font-face {
+  font-family: OpenSans-Regular;
+  src: url('OpenSans/OpenSans-Regular.ttf');
+}
+
+@font-face {
+  font-family: OpenSans-SemiBold;
+  src: url('OpenSans/OpenSans-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: OpenSans-Bold;
+  src: url('OpenSans/OpenSans-Bold.ttf');
+}
+
+@font-face {
+  font-family: OxygenMono;
+  src: url('OxygenMono/OxygenMono-Regular.ttf');
+}
+
+@font-face {
+  font-family: RobotoMono;
+  src: url('RobotoMono/RobotoMono-Regular.ttf');
+}
+
+@font-face {
+  font-family: ShareTechMono;
+  src: url('ShareTechMono/ShareTechMono-Regular.ttf');
+}
+
+@font-face {
+  font-family: SpaceMono;
+  src: url('SpaceMono/SpaceMono-Regular.ttf');
+}
+
+@font-face {
+  font-family: ElMessiri;
+  src: url('ElMessiri/ElMessiri-Regular.ttf');
+}

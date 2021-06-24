@@ -1,0 +1,45 @@
+/*
+  Table
+  by Sajjad alDalwachee
+*/
+/* Style */
+
+.infoContainer {
+  background: white;
+}
+
+.printContainer {
+  background: #efefef;
+}
+
+.table {
+  background: #add8e6;
+}
+
+.table th, .table th a {
+  color: black;
+}
+
+.table td, .table td a {
+  color: black;
+}
+
+.trOdd {
+  background: #e0e0e0;
+}
+
+.trEven {
+  background: #cfcfcf;
+}
+
+.trOdd, .trEven {
+  transition: 0.3s;
+}
+
+.trOdd:hover, .trEven:hover {
+  background: #f9f9f9;
+}
+
+.table tr th a:hover {
+  color: #d11a2a;
+}

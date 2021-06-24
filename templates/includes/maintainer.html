@@ -1,0 +1,25 @@
+{% load i18n %}
+{% load static %}
+{% load humanize %}
+<li class="maintainer">
+  <div class="maintainerControl">
+    <div class="images">
+      <div class="coverImg"><img src="{{ maintainer.backImg.url }}"></div>
+      <div class="avatarImg"><img src="{{ maintainer.faceImg.url }}"></div>
+    </div>
+    <div class="maintainerContent">
+      <h2 class="maintainerName">{{ maintainer.name }}</h2>
+      <p class="maintainerInfo">{% trans 'Address' %} : {{ maintainer.address }}</p>
+      <p class="maintainerInfo">{% trans 'Telephone' %} : {{ maintainer.telephone }}</p>
+      <p class="maintainerInfo">{% trans 'Clusters' %} : {{ maintainer.counter }}</p>
+      <div class="maintainerButtons">
+        <a class="showProfile" href="{% url 'maintainerProfile' maintainerPrimary=maintainer.primary %}">
+          {% trans 'Show Profile' %} <img  class="svgs" src="{% static 'public/svgs/profile.svg' %}" alt="" width="20px" height="20px">
+        </a>
+        <a class="editProfile" href="{% url 'updateMaintainer' maintainerPrimary=maintainer.primary %}">
+          {% trans 'Edit' %} <img  class="svgs" src="{% static 'public/svgs/settings.svg' %}" alt="" width="20px" height="20px">
+        </a>
+      </div>
+    </div>
+  </div>
+</li>

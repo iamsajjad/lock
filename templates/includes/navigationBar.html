@@ -1,0 +1,15 @@
+{% load i18n %}
+{% load static %}
+<nav>
+  <input class="menuButton" type="checkbox" id="menuButton" />
+  <label class="lablelicon" for="menuButton"><span class="navicon"></span></label>
+  <img src="{% static 'public/includes/icons/logo.png' %}" alt="" width="25px" height="25px">
+  <ul class="menu">
+    <li><a href="{% url 'graduatesView' %}">graduates<img  class="svgs" src="{% static 'public/svgs/review-checkmark.svg' %}" alt=""></a></li>
+    <li><a href="{% url 'dashboardPage' %}">Dashboard<img  class="svgs" src="{% static 'public/svgs/dashboard.svg' %}" alt=""></a></li>
+    <li class="authentication">
+      <a class="account" href="">{{ request.user }}</a>
+      <a class="account" href="{% url 'signOut' %}">{% trans 'Sign Out' %}</a>
+    </li>
+  </ul>
+</nav>

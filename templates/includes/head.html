@@ -1,0 +1,15 @@
+{% load i18n %}
+{% load static %}
+{% get_current_language as LANGUAGE_CODE %}
+<meta charset="UTF-8">
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+<link rel="icon" href="{% static 'public/includes/icons/favicon.png' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'public/includes/css/base.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'public/includes/css/normalize.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'public/includes/fonts/fonts.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'public/navigation/css/navigation.css' %}">
+{% if LANGUAGE_CODE == 'ar' %}
+<style>
+  body {direction: rtl;}
+</style>
+{% endif %}

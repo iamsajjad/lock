@@ -1,0 +1,73 @@
+/*
+  Cluster
+  by Sajjad alDalwachee
+*/
+
+h1, h2, h3, h4, h5, h6 {
+  color: #252525;
+}
+
+.clusterItem {
+  background: white;
+  box-shadow: 0 0 3px 0px rgb(0, 0, 0, 0.5);
+}
+
+.clusterName {
+  color: #252525;
+}
+
+.clusterInfo {
+  color: #252525;
+}
+
+.description {
+  color: #CC5050;
+}
+
+.branch .mark {
+  background: black;
+}
+
+.clusterItem .darkText {
+  color: #656565;
+}
+
+.clusterItem .typeGreen {
+  color: #BB9B49;
+}
+
+.clusterItem .typeRed {
+  color: #E60017;
+}
+
+.branch .mark.active {
+  background: #BB9B49;
+}
+
+.branch .mark.deactive {
+  background: #E60017;
+}
+
+.clusterOperations {
+  background: white;
+}
+
+.links {
+  color: #252525;
+}
+
+.links:hover {
+  color: #BB9B49;
+}
+
+.delete:hover {
+  color: #E60017;
+}
+
+.id {
+  background: black;
+}
+
+.id p {
+  color: #eeeeee;
+}

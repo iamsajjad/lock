@@ -1,0 +1,77 @@
+/* Scroll bar */
+.js-pscroll {
+  position: relative;
+  overflow: hidden;
+}
+
+.ps__rail-y {
+  right: 5px;
+  width: 8px;
+  background: rgb(0, 0, 0, 0.02);
+  opacity: 1 !important;
+}
+
+.ps__rail-y:hover {
+  width: 8px;
+}
+
+.ps__rail-y::before {
+  top: 10px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 20px);
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 5px;
+  background: transparent;
+}
+
+.ps__rail-y .ps__thumb-y {
+  width: 100%;
+  right: 0;
+  background: transparent;
+  opacity: 1 !important;
+}
+
+.ps__rail-y .ps__thumb-y:hover {
+  background: transparent;
+}
+
+.ps__rail-y .ps__thumb-y::before {
+  top: 10px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 20px);
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 4px;
+  background: transparent;
+}
+
+.table .ps__rail-y {
+  right: 5px;
+}
+
+.table .ps__rail-y:hover {
+  background: transparent;
+}
+
+.table .ps__rail-y::before {
+  background: #303030;
+  cursor: pointer;
+}
+
+.table .ps__rail-y .ps__thumb-y:hover {
+  width: 8px;
+  cursor: row-resize;
+}
+
+.table .ps__rail-y .ps__thumb-y::before {
+  background: white;
+}
+
+.table .ps__rail-y .ps__thumb-y::after {
+  background: black;
+}

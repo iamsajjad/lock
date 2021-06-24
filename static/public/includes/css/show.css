@@ -1,0 +1,234 @@
+/*
+  Show
+  by Sajjad alDalwachee
+*/
+body {
+  height: 100%;
+  min-width: 1320px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+* {
+  transition: 0.3s;
+}
+
+a {
+  color: white;
+  margin: 0px;
+  text-decoration: none;
+}
+
+.barsContainer {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.printContainer, .infoContainer {
+  width: 100%;
+  min-height: 50px;
+  background: #BB9B49;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.infoContainer {
+  background: white;
+}
+
+.infoContainer p {
+  color: #404040;
+  padding: 10px;
+  font-size: 14px;
+  font-family: OpenSans-Regular, Changa-Regular;
+}
+
+.showButtons {
+  width: 90px;
+  height: 40px;
+  margin: 0 25px;
+  padding: 12px 0px;
+  background: white;
+  border-radius: 8px;
+  border: 0;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 1);
+  outline: none;
+  transition: 0.3s;
+}
+
+.links {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  padding: 0;
+  color: black;
+  display: block;
+  font-size: 14px;
+  font-family: OpenSans-Regular, Changa-Regular;
+}
+
+.links .svgs {
+  vertical-align: middle;
+  filter: invert(0.2);
+}
+
+.showButtons:hover {
+  background: #000000;
+}
+
+.showButtons:hover .links{
+  color: #cccccc;
+}
+
+.showButtons:hover .links .svgs{
+  filter: invert(0.8);
+}
+
+.leftText {
+  color: #404040;
+  font-weight: normal;
+  font-size: 16px;
+  font-family: OpenSans-Regular, Changa-Regular;
+  margin: 0 30px;
+}
+
+.rightText {
+  color: black;
+  font-size: 16px;
+}
+
+/* Table */
+.container {
+  width: 100%;
+  height: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.columna {
+  width: 10%;
+  text-align: center;
+}
+
+.columnb {
+  width: 25%;
+  text-align: center;
+}
+
+.columnc {
+  width: 13%;
+  text-align: center;
+}
+
+.columnd {
+  width: 13%;
+  text-align: center;
+}
+
+.columne {
+  width: 13%;
+  text-align: center;
+}
+
+.columnf {
+  width: 13%;
+  text-align: center;
+}
+
+.columng {
+  width: 13%;
+  text-align: center;
+}
+
+/* Fix header */
+.table {
+  position: relative;
+  padding-top: 50px;
+}
+
+.tableHead th {
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.tableBody td {
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  word-break: break-all;
+}
+
+.tableHead {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.tableBody {
+  height: calc(100vh - 184px);
+  overflow: scroll;
+}
+
+/* Style */
+.table {
+  background: #303030;
+}
+
+.table th {
+  color: white;
+  line-height: 1.4;
+  font-family: OpenSans-Bold, Changa-Regular;
+  font-size: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: default;
+}
+
+.table td {
+  color: white;
+  line-height: 1.4;
+  font-size: 14px;
+  font-family: OpenSans-Regular, Changa-Regular;
+  background: transparent;
+  cursor: pointer;
+}
+
+.currentCurrency {
+  color: #4eb361;
+  font-family: OpenSans-bold, Changa-Regular;
+}
+
+.trOdd {
+  background: #0B0B0B;
+}
+
+.trEven {
+  background: #202020;
+}
+
+.trOdd, .trEven {
+  transition: 0.3s;
+}
+
+.trOdd:hover, .trEven:hover {
+  position: relative;
+  background: #808080;
+  cursor: default;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
