@@ -8,10 +8,9 @@ body {
   padding: 1em;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 15px;
-  color: #b9b9b9;
   background-color: #e3e3e3;
 }
-h4 {
+h1, h2, h3, h4 {
   color: #7ed321;
 }
 input,
@@ -171,7 +170,7 @@ select option {
   transition: 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
 }
-.container {
+.master {
   max-width: 38em;
   padding: 1em 3em 2em 3em;
   margin: 0em auto;
@@ -232,7 +231,6 @@ h1 {
 #lock {
   width: 100%;
   height: calc(100% - 15vh);
-  padding-bottom: 12vh;
   min-height: 120px;
 }
 

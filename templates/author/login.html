@@ -11,16 +11,16 @@
   </head>
 
   <body>
-    <div class="container">
+    <div class="master">
       <form method="post" action="{% url 'signIn'%}">{% csrf_token %}
         <div class="row">
-          <h4>Account</h4>
+          <h3>Login</h3>
           <div class="input-group input-group-icon">
             <input type="text" name="username" placeholder="Username"/>
           </div>
           <div class="input-group input-group-icon">
             <div class="container">
-              <svg class="patternlock" id="lock" viewBox="0 0 130 180" xmlns="http://www.w3.org/2000/svg">
+              <svg class="patternlock" id="lock" viewBox="0 0 130 130" xmlns="http://www.w3.org/2000/svg">
                 <g class="lock-actives"></g>
                 <g class="lock-lines"></g>
                 <g class="lock-dots">
@@ -49,7 +49,7 @@
           </div>
         </div>
         <input type="hidden" value="" name="pattern" id="patt"/>
-        <input type="submit" value="Create" name="" id=""/>
+        <input type="submit" value="Login" name="" id=""/>
       </form>
       <a href="http://127.0.0.1:8000/" target="">or Register</a>
     </div>

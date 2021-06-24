@@ -10,11 +10,47 @@ from .models import Users, UsersLogin
 
 @login_required(login_url='/')
 def homepage(request):
-    settings = Users.objects.get(id=request.user.id)
+    userinfo = Users.objects.get(id=request.user.id)
     response = {
-        'settings' : settings
+        'user' : userinfo
     }
     return render(request, "homepage.html", response)
+
+@login_required(login_url='/')
+def changePattern(request):
+    userinfo = Users.objects.get(id=request.user.id)
+    response = {
+        'user' : userinfo
+    }
+    return render(request, "author/changePattern.html", response)
+
+@login_required(login_url='/')
+def saveChanges(request):
+
+    fname = request.POST.get('fname', '')
+    lname = request.POST.get('lname', '')
+    email = request.POST.get('email', '')
+    pattern = request.POST.get('pattern', '')
+
+    userinfo = User.objects.get(id=request.user.id)
+    userinfo.email=email
+    userinfo.set_password(pattern)
+
+    user_account = Users.objects.get(username=str(request.user))
+    user_account.fname=fname
+    user_account.lname=lname
+    user_account.pattern=pattern
+    user_account.email=email
+
+    user_login = UsersLogin.objects.get(username=str(request.user))
+    user_login.pattern=pattern
+
+    userinfo.save()
+    user_account.save()
+    user_login.save()
+    login(request, userinfo)
+
+    return HttpResponseRedirect('/home/')
 
 def loginPage(request):
     return render(request, 'author/login.html')

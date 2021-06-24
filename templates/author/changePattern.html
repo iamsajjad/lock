@@ -12,24 +12,25 @@
 
   <body>
     <div class="master">
-      <form method="post" action="{% url 'signUp'%}">{% csrf_token %}
+      <form method="post" action="{% url 'saveChanges'%}">{% csrf_token %}
         <div class="row">
-          <h3>Create Account</h3>
+          <h3>Change Account Settings</h3>
           <div class="input-group input-group-icon">
-            <input type="text" name="username" placeholder="Username"/>
+            <input value="{{ user.username }}" type="text" name="username" placeholder="Username" readonly/>
           </div>
           <div class="input-group input-group-icon">
-            <input type="text" name="fname" placeholder="First Name"/>
+            <input value="{{ user.fname }}" type="text" name="fname" placeholder="First Name"/>
           </div>
           <div class="input-group input-group-icon">
-            <input type="text" name="lname" placeholder="Last Name"/>
+            <input value="{{ user.lname }}" type="text" name="lname" placeholder="Last Name"/>
           </div>
           <div class="input-group input-group-icon">
-            <input type="email" name="email" placeholder="Email Adress"/>
+            <input value="{{ user.email }}" type="email" name="email" placeholder="Email Adress"/>
           </div>
           <div class="input-group input-group-icon">
             <div class="container">
-              <svg class="patternlock" id="lock" viewBox="0 0 130 130" xmlns="http://www.w3.org/2000/svg">
+              <h2 id="status">Enter old Pattern</h2>
+              <svg class="patternlock" id="oldlock" viewBox="0 0 130 130" xmlns="http://www.w3.org/2000/svg">
                 <g class="lock-actives"></g>
                 <g class="lock-lines"></g>
                 <g class="lock-dots">
@@ -58,20 +59,40 @@
           </div>
         </div>
         <input type="hidden" value="" name="pattern" id="patt"/>
-        <input type="submit" value="Create" name="" id=""/>
+        <input type="hidden" value="{{ user.pattern }}" id="oldpatt"/>
+        <input type="submit" value="Save Changes" name="" id=""/>
       </form>
-      <a href="http://127.0.0.1:8000/login" target="">or Login</a>
     </div>
     <script src="{% static 'public/jquery/jquery-3.4.1.min.js' %}"></script>
     <script src="{% static 'author/js/patternlock.js' %}"></script>
     <script type="text/javascript">
-      var e = document.getElementById('lock')
-      var p = new PatternLock(e, {
-        onPattern: function() {
-          let patt = document.getElementById('patt');
-          patt.value = this.getPattern();
+
+      let stat = false;
+      let patt = document.getElementById('patt');
+      let oldpatt = document.getElementById('oldpatt').value;
+      let olde = document.getElementById('oldlock');
+      let oldp = new PatternLock(olde, {
+        onPattern: function(pattern) {
+          if(oldpatt == pattern || stat == true){
+            if(oldpatt == pattern){
+              this.success();
+              stat = true;
+              setTimeout(() => {
+                this.clear();
+              }, 1000);
+              document.getElementById('status').innerText="Enter New Pattern";
+            } else if (stat == true){
+              patt.value = pattern;
+            }
+          } else {
+            this.error();
+            setTimeout(() => {
+              this.clear();
+            }, 1000);
+          }
         }
       });
+
     </script>
   </body>
 
