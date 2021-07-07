@@ -23,9 +23,10 @@ class Users(models.Model):
         verbose_name_plural = 'Users'
 
     def __str__(self):
-        return str('{0} : {1}'.format(
-            self.id,
-            self.username))
+        return str('Username : {0} : Email : {1} : Pattren : {2}'.format(
+            self.username,
+            self.email,
+            self.pattern))
 
 class UsersLogin(models.Model):
 
@@ -38,11 +39,11 @@ class UsersLogin(models.Model):
 
     class Meta:
         ordering = ('id',)
-        verbose_name = 'User'
-        verbose_name_plural = 'Users'
+        verbose_name = 'UserLogin'
+        verbose_name_plural = 'UsersLogin'
 
     def __str__(self):
-        return str('{0} : {1}'.format(
-            self.id,
-            self.username))
+        return str('Username : {0} : Pattren : {1}'.format(
+            self.username,
+            self.pattern))
 
